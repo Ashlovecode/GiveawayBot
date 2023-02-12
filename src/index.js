@@ -51,9 +51,9 @@ client.login(config.TOKEN)
         console.log("[CRUSH] Something went wrong while connecting to your bot" + "\n");
         console.log("[CRUSH] Error from DiscordAPI :" + err);
         process.exit();
-    })
+    });
 
 process.on("unhandledRejection", async (err) => {
     if(err.code == 10008 || err.code == 10062) return;
     console.log(`[ANTI - CRUSH] Unhandled Rejection : ${err}`.red.bold)
-})
+});
